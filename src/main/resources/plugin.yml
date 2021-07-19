@@ -1,8 +1,9 @@
-name: WoodCutter
-main: se.enji.WoodCutter
-authors: [enjikaka, RoyCurtis]
+name: WoodCutter16
+main: pl.andus.WoodCutter
+authors: [enjikaka, RoyCurtis, Andus]
 website: http://minecraft.jeremy.se/WoodCutter
-version: 1.5.0
+version: 1.0.0
+api-version: 1.16
 
 permissions:
   woodcutter.use:

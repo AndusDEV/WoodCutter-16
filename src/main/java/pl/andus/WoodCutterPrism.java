@@ -1,4 +1,4 @@
-package se.enji;
+package pl.andus;
 
 import me.botsko.prism.Prism;
 import me.botsko.prism.actionlibs.RecordingQueue;

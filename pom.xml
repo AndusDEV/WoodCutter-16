@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>se.enji</groupId>
-    <artifactId>WoodCutter</artifactId>
-    <version>1.5.0-SNAPSHOT</version>
+    <groupId>pl.andus</groupId>
+    <artifactId>WoodCutter16</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <developers>
         <developer>
@@ -22,6 +22,11 @@
             <email>roy.adrian.curtis+github@gmail.com</email>
             <url>https://github.com/RoyCurtis</url>
         </contributor>
+
+        <contributor>
+            <name>AndusDEV</name>
+            <url>https://github.com/AndusDEV</url>
+        </contributor>
     </contributors>
 
     <repositories>
@@ -36,7 +41,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.9.2-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <!-- For PRISM API; included locally as not available on repo -->

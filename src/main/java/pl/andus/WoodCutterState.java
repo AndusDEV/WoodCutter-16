@@ -1,24 +1,25 @@
-package se.enji;
+package pl.andus;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 public class WoodCutterState {
-    private final int id;
-    private final byte meta;
-    private final Location origin;
-    private final Player player;
-    private final ItemStack heldItem;
-    private final int heldItemUnbreaking;
+    public final Material material;
+    public final byte meta;
+    public final Location origin;
+    public final Player player;
+    public final ItemStack heldItem;
+    public final int heldItemUnbreaking;
 
-    private int totalFallen = 0;
+    public int totalFallen = 0;
 
     @SuppressWarnings("deprecation")
     public WoodCutterState(Block block, Player player) {
-        this.id = block.getTypeId();
+        this.material = block.getType();
         this.meta = block.getData();
         this.origin = block.getLocation();
         this.player = player;
@@ -30,14 +31,14 @@ public class WoodCutterState {
     public boolean isSameTree(Block block) {
         // Using deprecated ID and meta here, because the only alternative seems to be
         // creating new Tree objects. Seems too wasteful
-        int blockId = block.getTypeId();
+        Material blockMat = block.getType();
         int blockMeta = block.getData();
         
         // Handle special case for large oak trees, which uses horizontal logs
-        if (id == 17 && meta == 0) {
-            return blockId == 17 && (blockMeta == 0 || blockMeta == 4 || blockMeta == 8);
+        if (material == Material.DARK_OAK_WOOD && meta == 0) {
+            return blockMat == Material.DARK_OAK_WOOD && (blockMeta == 0 || blockMeta == 4 || blockMeta == 8);
         }
 
-        else return blockId == id && blockMeta == meta;
+        else return blockMat == material && blockMeta == meta;
     }
 }
